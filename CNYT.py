@@ -56,8 +56,10 @@ def conjugado(com_1):
 
 def conversionp(com_1):
     a_1, b_1 = com_1.real, com_1.imag
-    if a_1 == 0:
+    if a_1 + b_1 == 0:
         return 0, 0
+    elif a_1 == 0:
+        return "No es posible"
     else:
         p = modulo(com_1)
         teta = math.atan(b_1/a_1)
@@ -74,7 +76,9 @@ def conversionc(p, teta):
 
 def retonar(com_1):
     a_1, b_1 = com_1.real, com_1.imag
-    if a_1 == 0:
+    if a_1 + b_1 == 0:
+        return 0
+    elif a_1 == 0:
         return "No es posible"
     else:
         return math.atan(b_1/a_1)
